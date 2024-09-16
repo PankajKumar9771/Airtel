@@ -127,14 +127,14 @@ header h1 .jio-text {
 
 
     header h1 {
-        font-size: 4rem; /* Larger title on mobile */
+        font-size: 2rem; /* Larger title on mobile */
     }
 
     .text-content {
-        font-size: 2rem; /* Increase text size for mobile */
+        font-size: 1.5rem; /* Increase text size for mobile */
     }
 
     .text-content .highlighted {
-        font-size: 2.4rem; /* Larger highlighted text */
+        font-size: 1.5rem; /* Larger highlighted text */
     }
 }
