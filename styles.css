@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
 }
@@ -18,15 +19,10 @@ a {
   margin: 20px 0;
 }
 
-.btn img {
-  width: 2rem;
-}
-
 body {
   font-family: "Tiro Devanagari Hindi", serif;
   font-weight: 700;
   font-style: normal;
-  /* font-family: 'Arial', sans-serif; */
   background-color: black;
   display: flex;
   justify-content: center;
@@ -39,50 +35,49 @@ body {
   max-width: 1200px;
   width: 100%;
   padding: 20px;
-  background-color: white; /* White background inside the container */
+  background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 header h1 {
-  color: black; /* Black text color for the title */
-  font-size: 3rem; /* Increase font size to match image */
+  color: black;
+  font-size: 3rem;
   font-weight: bold;
-  /* margin-bottom: 20px; */
   background-color: yellow;
 }
 
 header h1 .airtel-text {
-  color: #ff0000; /* Bright red for "Airtel" */
+  color: #ff0000;
 }
 
 header h1 .jio-text {
-  color: #0000ff; /* Blue for "Jio" */
+  color: #0000ff;
 }
 
 .content {
   display: flex;
   justify-content: space-between;
-  /* margin: 20px 0; */
-  flex-wrap: wrap; /* Ensure images fit on smaller screens */
+  flex-wrap: nowrap; /* Keep the images in one line */
+  gap: 10px; /* Add some space between the images */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
 }
 
 .image {
-  width: 48%;
-
-  margin-bottom: 10px; /* Adds space for smaller screens */
+  flex: 1;
+  min-width: 45%; /* Ensures images shrink responsively */
 }
 
 .image img {
   width: 100%;
-  height: 300px;
+  height: auto; /* Maintain aspect ratio */
   border-radius: 8px;
   object-fit: cover;
 }
 
 .text-content {
-  font-size: 1.5rem; /* Larger font size for better readability */
+  font-size: 1.5rem;
   color: #333;
   margin-top: 20px;
 }
@@ -92,48 +87,36 @@ header h1 .jio-text {
 }
 
 .text-content .highlighted {
-  color: red; /* Red text to highlight important information */
+  color: red;
   font-size: 1.5rem;
   font-weight: bold;
 }
-.container {
-  margin-top: 0;
-}
 
-header {
-  margin-top: 0;
-}
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .container {
-    margin-top: 0;
-  }
-
-  header {
-    margin-top: 0;
-  }
   .content {
-    flex-direction: row; /* Keep them inline */
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 0;
-    flex-wrap: nowrap; /* Ensure they don't go to the next line */
+    flex-wrap: nowrap; /* Keep images in one line on smaller screens */
+    justify-content: flex-start; /* Align images to the start */
+    overflow-x: scroll; /* Allow horizontal scrolling on small screens */
   }
 
   .image {
-    width: 50%; /* Smaller image size on mobile */
-    margin-bottom: 0;
+    min-width: 40%; /* Shrink the image width further for smaller screens */
   }
 
   header h1 {
-    font-size: 2rem; /* Larger title on mobile */
+    font-size: 2rem;
   }
 
   .text-content {
-    font-size: 1rem; /* Increase text size for mobile */
+    font-size: 1.2rem;
   }
 
   .text-content .highlighted {
-    font-size: 1rem; /* Larger highlighted text */
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    font-size: 1rem;
   }
 }
